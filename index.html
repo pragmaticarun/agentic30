@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic30 · Agentic AI Engineering — 30 weeks, India-first</title>
+<meta name="description" content="Agentic30: Agentic AI Engineering, a 30-week, project-driven programme with an India-first lens. 23 PDFs, runnable labs on local models.">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header on-dark">
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="Agentic30 home">
+      <img src="assets/img/mark.svg" alt="" width="28" height="28"><span>Agentic30</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+      
+        
+          <li class="hide-sm"><a href="#curriculum">Curriculum</a></li>
+          <li class="hide-sm"><a href="#capstones">Capstones</a></li>
+          <li class="hide-sm"><a href="#faq">FAQ</a></li>
+          <li><a class="btn btn-primary btn-sm" href="syllabus.pdf" download>Syllabus (PDF)</a></li>
+        
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">30-week programme · Python · local models</p>
+      <h1 id="hero-title">Build AI agents that are <span class="hl">tested, safe and costed in rupees</span>.</h1>
+      <p class="lead">Agentic30 is <strong>Agentic AI Engineering</strong>: from zero to production-grade, governed AI agents — a 30-week programme with an India-first lens.
+        You hand-build an agent loop in week 1 and finish with three portfolio repositories.</p>
+      <div class="cta-row">
+        
+          <a class="btn btn-primary btn-lg" href="syllabus.pdf" download>Download the syllabus (PDF)</a>
+          <a class="btn btn-ghost-light btn-lg" href="#curriculum">See the curriculum</a>
+        
+      </div>
+      <p class="small">Student portal: coming soon.</p>
+      <ul class="hero-stats" aria-label="Course at a glance">
+        <li><strong>30</strong><span>weeks</span></li>
+        <li><strong>23</strong><span>PDF booklets</span></li>
+        <li><strong>1,113</strong><span>pages</span></li>
+        <li><strong>10–12 h</strong><span>per week</span></li>
+      </ul>
+    </div>
+    <div class="terminal" aria-label="Example: running a lab offline">
+      <div class="term-bar"><span></span><span></span><span></span><em>labs/module-01</em></div>
+<pre><code><span class="c"># every lab directory has a run_all.sh</span>
+<span class="p">$</span> cd labs/module-01 &amp;&amp; ./run_all.sh mock
+<span class="c"># 'mock' needs no model. Then a local one:</span>
+<span class="p">$</span> AGENTLAB_BACKEND=ollama \
+    python labs/lab1_1_env_check.py
+<span class="o">The capital of Tamil Nadu is Chennai.</span></code></pre>
+      <p class="term-note">Commands and output from the Module 1 booklet (Lab 1.1, Ollama backend).</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="who">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow dark">Who it's for</p>
+      <h2 id="who">Experienced engineers moving into AI and agent engineering</h2>
+      <p>Professional software engineers (3+ years), in particular mobile and multimedia engineers who already think in
+        state machines, asynchronous pipelines, performance budgets and device constraints. Track 2 also serves tech
+        leads and architects who will own agent strategy.</p>
+      <p class="muted">Android analogies run throughout (coroutines ↔ asyncio, lifecycles ↔ agent state), and an optional elective covers on-device agents.</p>
+    </div>
+    <div class="card">
+      <h3>Before week 1</h3>
+      <ul class="checks">
+        <li>Comfortable in one typed language (Kotlin, Java or C++) and basic Python syntax</li>
+        <li>High-school algebra, vectors and matrices, basic probability</li>
+        <li>Git, a terminal, HTTP/JSON APIs</li>
+        <li>Any 64-bit laptop with 8 GB RAM (16 GB recommended). <strong>No GPU</strong> for the core modules</li>
+      </ul>
+      <p class="small muted">Self-check: fetch JSON from a URL and validate two fields; say what a (4×8)·(8×3) matrix product produces. If either is hard, start with the optional week-0 Python bridge.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="capstones" aria-labelledby="build">
+  <div class="wrap">
+    <p class="eyebrow dark">What you'll build</p>
+    <h2 id="build">Three capstones, graded on the same rubric</h2>
+    <p class="section-lead">Everyone builds C1. Then you build C2 (Track 1) or C3 (Track 2). Rubric: functionality 30%, engineering quality 20%, evaluation 20%, safety & governance 15%, documentation & demo 15%.</p>
+    <div class="cards-3">
+      
+      
+      <article class="card capstone cap-c1">
+        <p class="tag">C1 · weeks 21–22</p>
+        <h3>Kaveri, a bilingual customer-operations agent</h3>
+        <p>A customer-operations agent for an Indian D2C retailer or fintech that answers policy questions (RAG with citations), checks order/payment status (mock UPI/ONDC tools via an MCP server), remembers customer preferences with consent, escalates refunds through human approval, and works in English plus Tamil or Hindi. Delivered as a FastAPI + Docker service with tracing and evaluation reports.</p>
+        <p class="small muted">33-page booklet · Core</p>
+      </article>
+      
+      
+      <article class="card capstone cap-c2">
+        <p class="tag">C2 · weeks 27–28</p>
+        <h3>Niyam, a multi-agent regulatory-compliance RAG</h3>
+        <p>A regulatory-compliance copilot over public RBI/SEBI circulars: planner, retriever, analyst and verifier agents; a LoRA-fine-tuned small router model; hybrid retrieval with re-ranking; full observability; load test; eval gates.</p>
+        <p class="small muted">37-page booklet · Track 1</p>
+      </article>
+      
+      
+      <article class="card capstone cap-c3">
+        <p class="tag">C3 · week 28</p>
+        <h3>Kanakku, invoice-to-pay for an Indian SME</h3>
+        <p>Invoice-to-pay for an Indian SME: email/WhatsApp intake, GST invoice extraction and validation, three-way match against a mock ERP, approval routing, exception handling by an agent, built with n8n/Make plus code where needed; delivered with an ROI model, risk register and governance pack.</p>
+        <p class="small muted">37-page booklet · Track 2</p>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="curriculum" aria-labelledby="curr">
+  <div class="wrap">
+    <p class="eyebrow dark">Curriculum</p>
+    <h2 id="curr">Five phases, thirteen modules, two tracks</h2>
+    <p class="section-lead">22-week core (about 5 months), a 6-week specialisation and a 2-week career sprint. About 330 hours in total. Page counts are the real booklet lengths.</p>
+    <div class="phases">
+      
+      <section class="phase phase-A" aria-labelledby="ph-A">
+        <header>
+          <span class="phase-key" aria-hidden="true">A</span>
+          <div><h3 id="ph-A">Phase A · Zero to Agent</h3><p class="small muted">Weeks 1–9</p></div>
+        </header>
+        
+        <ul class="unit-list">
+          
+          <li><span class="code">M1</span><span class="t">Foundations: Python for AI Engineering, LLM Fundamentals &amp; the Agent Loop</span><span class="meta">wk 1–3 · 63 pp</span></li>
+          
+          <li><span class="code">M2</span><span class="t">Prompting, Structured Outputs &amp; Tool Calling</span><span class="meta">wk 4–5 · 56 pp</span></li>
+          
+          <li><span class="code">M3</span><span class="t">Frameworks I: LangChain 1.x &amp; LangGraph</span><span class="meta">wk 6–7 · 52 pp</span></li>
+          
+          <li><span class="code">M4</span><span class="t">Multi-Agent Systems &amp; Design Patterns</span><span class="meta">wk 8–9 · 44 pp</span></li>
+          
+        </ul>
+        
+      </section>
+      
+      <section class="phase phase-B" aria-labelledby="ph-B">
+        <header>
+          <span class="phase-key" aria-hidden="true">B</span>
+          <div><h3 id="ph-B">Phase B · Memory &amp; Retrieval</h3><p class="small muted">Weeks 10–15</p></div>
+        </header>
+        
+        <ul class="unit-list">
+          
+          <li><span class="code">M5</span><span class="t">Embeddings &amp; Vector Search</span><span class="meta">wk 10–11 · 64 pp</span></li>
+          
+          <li><span class="code">M6</span><span class="t">RAG Engineering</span><span class="meta">wk 12–13 · 84 pp</span></li>
+          
+          <li><span class="code">M7</span><span class="t">Model Context Protocol &amp; Interoperability</span><span class="meta">wk 14 · 44 pp</span></li>
+          
+          <li><span class="code">M8</span><span class="t">Agent Memory Design</span><span class="meta">wk 15 · 43 pp</span></li>
+          
+        </ul>
+        
+      </section>
+      
+      <section class="phase phase-C" aria-labelledby="ph-C">
+        <header>
+          <span class="phase-key" aria-hidden="true">C</span>
+          <div><h3 id="ph-C">Phase C · Deploy &amp; Govern</h3><p class="small muted">Weeks 16–22</p></div>
+        </header>
+        
+        <ul class="unit-list">
+          
+          <li><span class="code">M9</span><span class="t">Evaluation, Observability &amp; Hallucination Detection</span><span class="meta">wk 16–17 · 56 pp</span></li>
+          
+          <li><span class="code">M10</span><span class="t">Agent Safety, Security &amp; AI Governance</span><span class="meta">wk 18 · 52 pp</span></li>
+          
+          <li><span class="code">M11</span><span class="t">Production Engineering, Cost/Latency &amp; Local Models</span><span class="meta">wk 19 · 45 pp</span></li>
+          
+          <li><span class="code">M12</span><span class="t">Indic &amp; Digital-Public-Infrastructure Agents</span><span class="meta">wk 20 · 50 pp</span></li>
+          
+          <li><span class="code">C1</span><span class="t">Core capstone: Kaveri, a bilingual customer-operations agent</span><span class="meta">wk 21–22 · 33 pp</span></li>
+          
+        </ul>
+        
+      </section>
+      
+      <section class="phase phase-D" aria-labelledby="ph-D">
+        <header>
+          <span class="phase-key" aria-hidden="true">D</span>
+          <div><h3 id="ph-D">Phase D · Specialise</h3><p class="small muted">Weeks 23–28</p></div>
+        </header>
+        
+        <div class="tracks">
+          
+          <div class="track track-t1">
+            <h4>Track 1 · Advanced engineering</h4>
+            <ul class="unit-list">
+              
+              <li><span class="code">T1A</span><span class="t">Track 1 Part A — Advanced LangGraph and agent SDKs</span><span class="meta">wk 23–24 · 51 pp</span></li>
+              
+              <li><span class="code">T1B</span><span class="t">Track 1 Part B — Fine-tuning and serving</span><span class="meta">wk 25–26 · 51 pp</span></li>
+              
+              <li><span class="code">C2</span><span class="t">Track 1 capstone: Niyam, a multi-agent regulatory-compliance RAG</span><span class="meta">wk 27–28 · 37 pp</span></li>
+              
+            </ul>
+          </div>
+          
+          <div class="track track-t2">
+            <h4>Track 2 · Strategy &amp; enterprise workflows</h4>
+            <ul class="unit-list">
+              
+              <li><span class="code">T2A</span><span class="t">Track 2 Part A — No-code automation and process discovery</span><span class="meta">wk 23–25 · 59 pp</span></li>
+              
+              <li><span class="code">T2B</span><span class="t">Track 2 Part B — Enterprise platforms, ROI and governance</span><span class="meta">wk 26–27 · 50 pp</span></li>
+              
+              <li><span class="code">C3</span><span class="t">Track 2 capstone: Kanakku, invoice-to-pay for an Indian SME</span><span class="meta">wk 28 · 37 pp</span></li>
+              
+            </ul>
+          </div>
+          
+          <div class="track track-e1">
+            <h4>Optional elective, alongside either track</h4>
+            <ul class="unit-list">
+              
+              <li><span class="code">E1</span><span class="t">Elective — Multimodal &amp; On-device Agents (Android)</span><span class="meta">parallel to 23–28 · 49 pp</span></li>
+            </ul>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section class="phase phase-E" aria-labelledby="ph-E">
+        <header>
+          <span class="phase-key" aria-hidden="true">E</span>
+          <div><h3 id="ph-E">Phase E · Career-ready</h3><p class="small muted">Weeks 29–30</p></div>
+        </header>
+        
+        <ul class="unit-list">
+          
+          <li><span class="code">M13</span><span class="t">Career &amp; Certification</span><span class="meta">wk 29–30 · 55 pp</span></li>
+          
+        </ul>
+        
+      </section>
+      
+    </div>
+    <p class="small muted">Plus the master syllabus (18 pp) and a course glossary of 336 terms and 69 acronyms (20 pp).</p>
+  </div>
+</section>
+
+<section class="section india" aria-labelledby="india">
+  <div class="wrap">
+    <p class="eyebrow dark">India-first</p>
+    <h2 id="india">Built around Indian languages, payments and law</h2>
+    <div class="cards-4">
+      <article class="card">
+        <h3>Tamil and Hindi</h3>
+        <p>Measure how script choice changes token counts and cost (Lab 12.1), handle Tanglish and Hinglish code-mixing (Lab 12.2), and build a bilingual retriever over an English–Tamil corpus (Module 5).</p>
+      </article>
+      <article class="card">
+        <h3>UPI and ONDC, on mocks</h3>
+        <p>A mock UPI payment agent with a PSP sandbox state machine and idempotency (Lab 12.3), a Beckn/ONDC-style buyer agent (Lab 12.4), and an MCP server for a mock ONDC catalogue (Module 7). Never real payment rails.</p>
+      </article>
+      <article class="card">
+        <h3>DPDP Act 2023</h3>
+        <p>Consent-aware memory with erasure (Module 8), PII redaction for Aadhaar- and PAN-like identifiers and a DPIA (Module 10), and a DPDP governance pack for Track 2.</p>
+      </article>
+      <article class="card">
+        <h3>Costs in ₹</h3>
+        <p>Token economics in INR from Module 1, a containerised agent with a ₹ cost report (Module 11), and a Monte Carlo ROI model in rupees (T2B).</p>
+      </article>
+    </div>
+    <p class="note"><strong>Honest caveat:</strong> the Tamil and Hindi text in the course was written without native-speaker review. Have it reviewed before you rely on it.</p>
+  </div>
+</section>
+
+<section class="section alt" id="labs" aria-labelledby="labs-h">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow dark">Labs on local models</p>
+      <h2 id="labs-h">Every lab runs offline on a laptop CPU</h2>
+      <p>Labs run against a deterministic <strong>mock</strong> model, so results reproduce exactly, or a small <strong>Qwen2.5-Instruct</strong> model (0.5B, 1.5B or 3B, Q4_K_M) served by <strong>Ollama</strong>. A cloud API key is optional, and none was used to build the course. Each booklet's appendix carries the real run log.</p>
+      <p>Labs measure things, not just demo them: recall@k, MRR and nDCG for retrievers; schema validity on a 50-item invoice set; attack success rate on an injection canary suite; p50/p95 latency and throughput; ₹ per 1,000 requests.</p>
+    </div>
+    <div class="card">
+      <h3>What was not run</h3>
+      <ul class="dashes">
+        <li>GPU-only items (QLoRA/bitsandbytes, vLLM, a real Kubernetes cluster) are documented and validated, not executed. The T1B fine-tune is a CPU LoRA on a 0.5B model.</li>
+        <li>No Android device or emulator: E1's Kotlin samples were not compiled.</li>
+        <li>Zapier, Make and enterprise agent platforms: recipes from official docs, no accounts.</li>
+        <li>Datasets are synthetic and evaluation sets are small (tens of items).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="assess">
+  <div class="wrap">
+    <p class="eyebrow dark">Assessment</p>
+    <h2 id="assess">How progress is measured</h2>
+    <div class="weights" role="list">
+      <div role="listitem"><strong>30%</strong><span>Labs (M1–M12)</span></div>
+      <div role="listitem"><strong>15%</strong><span>Quizzes (M1–M12)</span></div>
+      <div role="listitem"><strong>15%</strong><span>Mini-projects</span></div>
+      <div role="listitem"><strong>20%</strong><span>Core capstone C1</span></div>
+      <div role="listitem"><strong>15%</strong><span>Track capstone</span></div>
+      <div role="listitem"><strong>5%</strong><span>Career portfolio</span></div>
+    </div>
+    <p class="small muted">Pass at 60% overall, at least 50% in each capstone and a passed final defence. The certificate is a course certificate, not an accredited award.</p>
+  </div>
+</section>
+
+<section class="section alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <p class="eyebrow dark">FAQ</p>
+    <h2 id="faq-h">Questions</h2>
+    
+    <div class="faq">
+      
+      <details><summary>Do I need a GPU or a paid API key?</summary><p>No. Core modules run on a CPU with a mock backend or a local Ollama model. Track 1&#39;s QLoRA and vLLM steps need a GPU; they are documented, and the course&#39;s own fine-tune ran as a CPU LoRA.</p></details>
+      
+      <details><summary>What will it cost to run the labs?</summary><p>Nothing, if you stay on mocks and local models. The syllabus estimates that using a cloud model only for final evaluations keeps total API spend for the programme under ₹3,000; Track 1 GPU time is the main extra cost.</p></details>
+      
+      <details><summary>How long does it take?</summary><p>30 weeks at 10–12 hours a week, about 330 hours: roughly 2 h reading, 1 h quiz and review, 6–8 h labs and projects, and 1 h discussion each week.</p></details>
+      
+      <details><summary>Which track should I pick?</summary><p>Track 1 (advanced LangGraph, agent SDKs, LoRA fine-tuning and serving, then the Niyam capstone) if you want to build agent systems. Track 2 (n8n and no-code automation, enterprise platforms, ROI and governance, then the Kanakku capstone) if you will own agent strategy.</p></details>
+      
+      <details><summary>Is the course affiliated with a university or certificate provider?</summary><p>No. It is an independent course. Its scope was benchmarked against a publicly available programme syllabus, but there is no affiliation, endorsement or partnership, and its certificate is not an accredited award.</p></details>
+      
+      <details><summary>What will the student portal include?</summary><p>The student portal is coming soon. It is planned to give access to all 23 PDF booklets in your browser, the lab code archive, auto-graded module quizzes taken from the booklets&#39; answer keys, progress tracking for every section and lab, and a place to save your capstone links and notes.</p></details>
+      
+      <details><summary>Are the Tamil and Hindi materials reviewed?</summary><p>Not yet. They were written without native-speaker review, and the course says so. Treat any Indic-language score as provisional until reviewed.</p></details>
+      
+      <details><summary>Which tool versions does it use?</summary><p>Versions were verified on PyPI and official docs on 11 October 2026, e.g. LangGraph 1.2.14, LangChain 1.4.4, MCP spec revision 2026-07-28, FastAPI 0.143.0 and Ollama 0.40.3. They will drift; each module pins its own requirements.</p></details>
+      
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta">
+  <div class="wrap cta-inner">
+    <div>
+      <h2 id="cta">Start with Module 1: build an agent loop by hand</h2>
+      <p>Download the master syllabus to see the full plan. The student portal, with the booklets, quizzes and progress tracking, is coming soon.</p>
+    </div>
+    <a class="btn btn-saffron btn-lg" href="syllabus.pdf" download>Download the syllabus (PDF)</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="brand brand-foot"><img src="assets/img/mark.svg" alt="" width="22" height="22"><span>Agentic30</span></p>
+      <p class="muted small">Agentic AI Engineering: a 30-week programme written for Arunkumar Maniam Rajan, Chennai. Independent course; it is not affiliated with, or endorsed by, any university or certificate provider. Tool versions verified 11–12 October 2026.</p>
+    </div>
+    <div class="small muted">
+      <p>Every lab runs offline on a CPU with a mock backend or a local model. No cloud API key was used to build the course.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
